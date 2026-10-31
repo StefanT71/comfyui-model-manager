@@ -9,6 +9,10 @@ A small Windows program that keeps track of installed AI models:
 5. You can **archive** unused files with their folder structure preserved and **restore** archived files that are used – per file, either with its folder structure or into a chosen folder.
 6. Flags **duplicates** in the archive (same relative path and size as a model) and can delete the archive copy.
 
+![ComfyUI Model Manager](docs/screenshot.png)
+
+*The list shows used, unused, archived and duplicate files; selecting a row lists the workflows that reference it.*
+
 ## Download
 
 Grab the latest build from the [Releases page](../../releases/latest), unzip it and run `ComfyUI Model Manager.exe`.
