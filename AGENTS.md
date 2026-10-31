@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Small WinForms app (English UI by default, with external translations; Swedish, German, French, Spanish and Italian included) that finds unused ComfyUI model files by searching workflow JSONs, archives them, restores them and removes duplicate archive copies.
-Not a git repository (no history/CI to consult), no package manager and no .NET SDK on the machine. All code is in `src\`; the UI is built in code (no designer files or `.resx`), and translations live in `lang\`.
+Git repository on GitHub (`StefanT71/comfyui-model-manager`, private), no CI, no package manager and no .NET SDK on the machine. All code is in `src\`; the UI is built in code (no designer files or `.resx`), and translations live in `lang\`.
 
 ## Build
 
@@ -13,6 +13,7 @@ Not a git repository (no history/CI to consult), no package manager and no .NET 
 - The icon is embedded twice in `build.cmd`: `/win32icon` and `/resource:...,ComfyUI.ModelManager.AppIcon.ico`. `MainForm.LoadAppIcon` looks up that exact resource name; renaming breaks the window icon silently (falls back).
 - English is embedded from `lang\_template.ini` as `ComfyUI.ModelManager.English.ini`; that file is both the built-in language and the translation template. External languages live in `lang\*.ini` and are not compiled. If you add a new `.cs` file, add it to `build.cmd`.
 - `LICENSE` is embedded as `ComfyUI.ModelManager.License.txt` (third resource in `build.cmd`) and shown by `MainForm.LoadLicenseText` in the About dialog's license link. Keep the resource name in sync; the file is only a fallback, so the license works even if `LICENSE` is not shipped next to the exe.
+- Only sources are versioned. `.gitignore` excludes the built exe/`.exe.config`, `dist\`, `ComfyUI Model Manager.ini`, `selftest.log` and `testdata\`. A release is published as a zip containing the exe, `ComfyUI Model Manager.exe.config`, `LICENSE`, `README.md` and `lang\` — never the ini or test data.
 
 ## Test / verify
 
