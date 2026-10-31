@@ -1,0 +1,16 @@
+# User settings (contains real folder paths, never publish)
+ComfyUI Model Manager.ini
+
+# Self test output
+selftest.log
+testdata/
+
+# Build output (distributed as a release zip instead)
+ComfyUI Model Manager.exe
+ComfyUI Model Manager.exe.config
+dist/
+
+# Editor / IDE
+.vs/
+*.user
+*.suo
